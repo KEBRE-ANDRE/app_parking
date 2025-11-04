@@ -1,0 +1,7 @@
+{
+  "name": "ParkingApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

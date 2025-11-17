@@ -70,6 +70,7 @@ export class AuthPage implements OnInit {
       header: 'Erreur',
       message: 'Identifiants incorrects !',
       buttons: ['OK']
+      this.loginForm.reset();
     });
 
     await alert.present();

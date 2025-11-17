@@ -1,0 +1,87 @@
+/* Fond de la page avec dégradé */
+ion-content {
+  --background: linear-gradient(to bottom, #f58220, #fff7f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Conteneur du formulaire */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  color: black;
+}
+
+/* Titre du formulaire */
+ion-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Texte centré */
+.text {
+  color: black;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Items du formulaire */
+ion-item {
+  margin-bottom: 15px;
+  --background: #fefefe;
+  border-radius: 10px;
+  color: black;
+}
+
+/* Labels */
+ion-label {
+  color: #333; /* toujours visible */
+  font-weight: 500;
+}
+
+/* Inputs */
+ion-input {
+  color: #000; /* texte saisi visible */
+  --padding-start: 10px;
+  --padding-end: 10px;
+}
+
+/* Sélecteurs */
+ion-select {
+  color: #000;
+}
+
+/* Bouton */
+ion-button {
+  margin-top: 15px;
+  --border-radius: 15px;
+  font-weight: bold;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Séparateur */
+hr {
+  margin: 15px 0;
+  border: 0;
+  border-top: 2px solid #ccc;
+}
+
+/* Responsivité */
+@media (max-width: 500px) {
+  .form-container {
+    padding: 20px;
+  }
+  ion-title {
+    font-size: 22px;
+  }
+}

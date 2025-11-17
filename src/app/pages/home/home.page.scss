@@ -1,0 +1,31 @@
+ion-content {
+  --background: #f58220; /* blanc */
+}
+ .text{
+    color: black;
+    text-align: center;
+
+}
+
+.text {
+  text-align: center;
+}
+
+ion-button {
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+hr {
+  margin: 15px 0;
+  border: 0;
+  border-top: 2px solid #ccc;
+}
+
+.logout-container {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 16px;
+}

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Authentification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="logo-container">
+    <img src="assets/image/logo_ESTA.jpg" alt="Logo ESTA" class="logo-img" />
+  </div>
+
+  <h2 class="text-center">Connexion</h2>
+
+  <form [formGroup]="loginForm">
+
+    <ion-item>
+      <ion-label position="floating">Identifiant</ion-label>
+      <ion-input formControlName="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" (click)="login()">
+      Se connecter
+    </ion-button>
+
+  </form>
+
+  <div class="parking-img">
+    <img src="assets/image/ESTA_parking.jpg" alt="Parking motos">
+  </div>
+
+</ion-content>
+

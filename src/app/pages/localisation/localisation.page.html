@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Localisation du véhicule</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-button expand="block" (click)="getLocation()">
+    📍 Obtenir la localisation
+  </ion-button>
+
+  <div *ngIf="latitude && longitude" class="ion-margin-top">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Coordonnées GPS</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Latitude : {{ latitude }}</p>
+        <p>Longitude : {{ longitude }}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button color="success" expand="block" (click)="sendLocationWhatsApp()">
+      Envoyer la position via WhatsApp
+    </ion-button>
+  </div>
+</ion-content>

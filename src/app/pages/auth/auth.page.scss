@@ -1,0 +1,31 @@
+
+ion-content{
+
+   --background: linear-gradient(to bottom, #f58220, #fff7f0);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.logo-img {
+  width: max-content;
+  height: auto;
+  border-radius: 12px;
+}
+
+
+.parking-img {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.parking-img img {
+  width: 95%;        /* adapte selon ton goût */
+  border-radius: 5px;
+  height: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Parking Intelligent</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h2 class="text">Bienvenue 👋</h2>
+  <p class="text">Gérez les abonnés, les visiteurs et localisez facilement les véhicules.</p>
+  <hr>
+  <ion-button (click)="inscription()" shape="block" color="success"> Incrire un étudiant</ion-button>
+  <ion-button (click)="abonnement()" shape="block" color="warning"> Abonnement</ion-button>
+  <ion-button expand="block" (click)=" ticket()" color="secondary">Ticket </ion-button>
+  <ion-button expand="block" (click)="localisation()" color="tertiary">Localiser un véhicule</ion-button>
+  <ion-button expand="block" (click)="historique()" color="warning" >Historique</ion-button> <br>
+  
+  
+
+  <div class="logout-container">
+  <ion-button expand="block"  (click)="logout()" color="danger"> Déconnexion </ion-button>
+  </div>
+</ion-content>
+

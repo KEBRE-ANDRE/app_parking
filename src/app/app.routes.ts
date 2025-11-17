@@ -43,6 +43,10 @@ export const routes: Routes = [
     path: 'inscription',
     loadComponent: () => import('./pages/inscription/inscription.page').then( m => m.InscriptionPage)
   },
+  {
+    path: 'presentation',
+    loadComponent: () => import('./pages/presentation/presentation.page').then( m => m.PresentationPage)
+  },
   /*{
     path: 'authentification',
     loadComponent: () => import('./pages/pages/authentification/authentification.page').then( m => m.AuthentificationPage)

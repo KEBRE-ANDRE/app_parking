@@ -1,0 +1,91 @@
+/* ========================
+   Style général de la page
+======================== */
+ion-content {
+  --background: #f5950e; /* fond clair */
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ========================
+   Styles des cartes (formulaire & liste)
+======================== */
+ion-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #180202;
+}
+
+/* ========================
+   Styles des headers des cartes
+======================== */
+ion-card-header {
+  background-color: #05e639e0; /* bleu clair */
+  color: rgb(223, 158, 7);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* ========================
+   Styles des boutons
+======================== */
+ion-button {
+  font-weight: bold;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 6px rgba(14, 237, 40, 0.2);
+}
+
+/* ========================
+   Styles des items du formulaire
+======================== */
+ion-item {
+  --border-radius: 8px;
+  --background: #18150a;
+  margin-bottom: 12px;
+  padding: 2px 2px;
+}
+
+/* ========================
+   Liste des étudiants
+======================== */
+ion-list ion-item {
+  --background: #fa7e09;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+ion-list ion-item h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+ion-list ion-item p {
+  margin: 2px 0 0 0;
+  font-size: 14px;
+  color: #555555;
+}
+
+/* ========================
+   Espacements et padding
+======================== */
+.ion-padding {
+  padding: 6px;
+}
+.ion-margin-top {
+  margin-top: 6px;
+}
+
+
+/* Espacement autour du datetime */
+ion-datetime {
+  width: 100%;           /* prend toute la largeur disponible */
+  font-size: 16px;       /* texte plus lisible */
+  --padding-start: 2px; /* padding à gauche */
+  --padding-end: 2px;   /* padding à droite */
+}
+
+/* Ajouter un peu plus de hauteur */
+ion-item {
+  min-height: 60px;
+}

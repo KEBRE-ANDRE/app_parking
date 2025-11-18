@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Inscription Étudiant</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -43,6 +46,14 @@
       S'inscrire
     </ion-button>
 
+    <ion-button expand="block" color="success"  (click)="abonnement()" class="ion-margin-top">
+     Enregistrer Abonnement
+    </ion-button>
+
   </form>
+  
+
+<br/>
+
 </ion-content>
 

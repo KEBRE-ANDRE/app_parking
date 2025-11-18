@@ -1,21 +1,79 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <!-- 
+<ion-header>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home" text="Précédent">
-    
-     </ion-back-button>
-    </ion-buttons> -->
-    <ion-title>abonnement</ion-title>
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Abonnement Étudiants</ion-title>
   </ion-toolbar>
-<ion-button (click)="home()" shape="round" color="warning"><ion-icon name="arrow-back-outline"> retour</ion-icon> retour</ion-button>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      
-      <ion-title size="large">abonnement</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+
+  <!-- Formulaire Abonnement -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nouvel Abonnement</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Sélection de l'étudiant -->
+      <ion-item>
+        <ion-label>Étudiant</ion-label>
+        <ion-select [(ngModel)]="selectedEtudiant" placeholder="Sélectionner un étudiant">
+          <ion-select-option *ngFor="let e of etudiants" [value]="e">
+            {{ e.nom }} - {{ e.plaque }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Date de début -->
+      <ion-item>
+        <ion-label>Date de début</ion-label>
+        <ion-datetime [(ngModel)]="dateDebut" displayFormat="YYYY-MM-DD" placeholder="Sélectionner la date"></ion-datetime>
+      </ion-item>
+
+      <!-- Bouton pour générer la prévisualisation du reçu -->
+      <ion-button expand="full" color="primary" class="ion-margin-top" (click)="genererEtAfficherRecu()">
+        Prévisualiser le reçu
+      </ion-button>
+
+      <!-- Bouton pour valider l'abonnement (optionnel si tu veux valider seulement après prévisualisation) -->
+      <!-- <ion-button expand="full" color="secondary" class="ion-margin-top" (click)="validerAbonnement()">
+        Valider l'abonnement
+      </ion-button> -->
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Aperçu du reçu -->
+  <ion-card *ngIf="recuPreview" class="ion-margin-top">
+    <ion-card-header>
+      <ion-card-title>Aperçu du reçu</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <pre>{{ recuPreview }}</pre>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Bouton pour envoyer le reçu via WhatsApp -->
+  <ion-button *ngIf="recuPreview" expand="full" color="success" class="ion-margin-top" (click)="envoyerRecuWhatsApp()">
+    Envoyer sur WhatsApp
+  </ion-button>
+
+  <!-- Liste des étudiants inscrits -->
+  <ion-card *ngIf="etudiants.length > 0" class="ion-margin-top">
+    <ion-card-header>
+      <ion-card-title>Étudiants inscrits</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let e of etudiants">
+          <ion-label>
+            <h2>{{ e.nom }}</h2>
+            <p>Matricule : {{ e.matricule }} | Plaque : {{ e.plaque }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

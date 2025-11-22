@@ -1,13 +1,53 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>ticket</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Ticket Journalier</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ticket</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+
+  <!-- Recherche par plaque -->
+  <ion-item>
+    <ion-label position="floating">Rechercher par numéro de plaque</ion-label>
+    <ion-input [(ngModel)]="searchPlate" (ionInput)="searchTicket()"></ion-input>
+  </ion-item>
+
+  <!-- Résultats -->
+  <ion-list *ngIf="filteredTickets.length > 0">
+    <ion-item *ngFor="let t of filteredTickets">
+      <ion-label>
+        <h2>{{ t.plaque }}</h2>
+        <p>Date : {{ t.date }}</p>
+      </ion-label>
+      <ion-button fill="outline" (click)="generatePDF(t)">PDF</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list-header>
+    <ion-label><strong>Créer un Ticket Journalier</strong></ion-label>
+  </ion-list-header>
+
+  <!-- Formulaire Ticket -->
+  <ion-item>
+    <ion-label position="floating">Nom du visiteur / étudiant</ion-label>
+    <ion-input [(ngModel)]="ticket.nom"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Numéro de Plaque</ion-label>
+    <ion-input [(ngModel)]="ticket.plaque"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Tarif</ion-label>
+    <ion-input value=" 100 F CFA" readonly></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" color="success" (click)="saveTicket()">
+    Enregistrer le Ticket
+  </ion-button>
+
 </ion-content>

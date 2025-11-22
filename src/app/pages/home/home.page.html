@@ -5,19 +5,39 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
+  
   <h2 class="text">Bienvenue 👋</h2>
   <p class="text">Gérez les abonnés, les visiteurs et localisez facilement les véhicules.</p>
   <hr>
-  <ion-button (click)="inscription()" shape="block" color="success"> Incrire un étudiant</ion-button>
-  <ion-button (click)="abonnement()" shape="block" color="warning"> Abonnement</ion-button>
-  <ion-button expand="block" (click)=" ticket()" color="secondary">Ticket </ion-button>
-  <ion-button expand="block" (click)="localisation()" color="tertiary">Localiser un véhicule</ion-button>
-  <ion-button expand="block" (click)="historique()" color="warning" >Historique</ion-button> <br>
-  
-  
+
+  <div class="grid-buttons">
+
+    <ion-button (click)="inscription()" class="big-btn" color="success">
+      Inscrire étudiant
+    </ion-button>
+
+    <ion-button (click)="abonnement()" class="big-btn" color="warning">
+      Abonnement
+    </ion-button>
+
+    <ion-button (click)="ticket()" class="big-btn" color="secondary">
+      Ticket
+    </ion-button>
+
+    <ion-button (click)="localisation()" class="big-btn" color="tertiary">
+      Localisation
+    </ion-button>
+
+    <ion-button (click)="historique()" class="big-btn" color="warning">
+      Historique
+    </ion-button>
+
+  </div>
 
   <div class="logout-container">
-  <ion-button expand="block"  (click)="logout()" color="danger"> Déconnexion </ion-button>
+    <ion-button expand="block" (click)="logout()" color="danger">
+      Déconnexion
+    </ion-button>
   </div>
-</ion-content>
 
+</ion-content>

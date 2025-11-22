@@ -46,7 +46,7 @@ export class AbonnementPage implements OnInit {
   // 🔹 Générer un mini reçu texte
   genererRecu(abonnement: any, etudiant: Etudiant): string {
     return `
-Reçu d'abonnement Parking
+Reçu d'abonnement Parking-ESTA
 ----------------------------
 Nom: ${etudiant.nom}
 Matricule: ${etudiant.matricule}
@@ -68,7 +68,7 @@ Merci pour votre confiance !
       nomEtudiant: this.selectedEtudiant.nom,
       dateDebut: this.dateDebut,
       dateFin: this.calculerDateFin(this.dateDebut),
-      montant: 8000
+      montant: 1500
     };
 
     // Générer le texte du reçu

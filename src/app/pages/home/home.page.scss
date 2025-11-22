@@ -1,13 +1,9 @@
 ion-content {
-  --background: #f58220; /* blanc */
-}
- .text{
-    color: black;
-    text-align: center;
-
+  --background: #f58220;
 }
 
 .text {
+  color: black;
   text-align: center;
 }
 
@@ -16,12 +12,30 @@ ion-button {
   border-radius: 15px;
 }
 
+/* Ligne séparatrice */
 hr {
   margin: 15px 0;
   border: 0;
   border-top: 2px solid #ccc;
 }
 
+/* 🚀 2 boutons par ligne */
+.grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* 🚀 Gros boutons */
+.big-btn {
+  height: 90px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 14px;
+}
+
+/* Bouton Déconnexion en bas fix */
 .logout-container {
   position: absolute;
   bottom: 20px;

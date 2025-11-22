@@ -69,8 +69,8 @@ export class AuthPage implements OnInit {
     const alert = await this.alertCtrl.create({
       header: 'Erreur',
       message: 'Identifiants incorrects !',
-      buttons: ['OK']
-      this.loginForm.reset();
+      buttons: ['OK'],
+      //this.loginForm.reset(),
     });
 
     await alert.present();
